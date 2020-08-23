@@ -2,7 +2,6 @@ package windowandframes;
 
 import java.io.File;
 import java.io.IOException;
-import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
