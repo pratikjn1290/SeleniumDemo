@@ -13,11 +13,13 @@ public class Chromeoptions {
 	public void setupchrome() {
 
 			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\Pratik\\Desktop\\RestAssured\\Selenium\\Drivers\\chromedriver.exe");
+					"C:\\Users\\Pratik\\git\\SeleniumDemo\\Selenium\\Drivers\\chromedriver.exe");
 			ChromeOptions option = new ChromeOptions();
 			option.addArguments("--disabled-extension");
 			option.addArguments("--enable-javascript");
 			option.addArguments("--disable-notification");
+			option.getBrowserName();
+			option.addArguments("--headless");
 			WebDriver driver = new ChromeDriver(option);
 			driver.get("https://google.com");
 			driver.manage().window().maximize();

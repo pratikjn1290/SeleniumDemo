@@ -10,7 +10,8 @@ public class htmlunitbrowser {
 	@Test
 	public void setuphtml() {
 		
-		WebDriver driver = new HtmlUnitDriver();
+		
+		WebDriver driver = new HtmlUnitDriver(true);
 		driver.get("https://www.google.com");
 		System.out.println(driver.getTitle());
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

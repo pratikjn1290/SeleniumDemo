@@ -21,7 +21,6 @@ public class Fluentwait {
 	{
 		System.setProperty("webdriver.gecko.driver",
 				"C:/Users/Pratik/git/SeleniumDemo/Selenium/Drivers/geckodriver.exe");
-
 		FirefoxOptions opt = new FirefoxOptions();
 		opt.setLogLevel(FirefoxDriverLogLevel.INFO);
 		WebDriver driver = new FirefoxDriver(opt);
