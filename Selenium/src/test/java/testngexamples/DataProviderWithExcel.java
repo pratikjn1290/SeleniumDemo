@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
 
 public class DataProviderWithExcel {
@@ -51,7 +52,7 @@ public class DataProviderWithExcel {
 
 		XSSFSheet sh = wb.getSheetAt(0);
 
-		int rowno = sh.getLastRowNum() - sh.getLastRowNum();
+		int rowno = sh.getLastRowNum() - sh.getFirstRowNum();
 
 		for (int i = 0; i <= rowno; i++) {
 

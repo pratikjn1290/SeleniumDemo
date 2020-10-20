@@ -21,7 +21,7 @@ public class DataProvider3 {
 	
 				
 				data[i][0] = "pratik.jain@corpository.com";
-				data[i][1] = "*Corpository123";
+				data[i][1] = "";
 			}
 	return data;
 

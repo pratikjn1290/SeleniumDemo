@@ -41,7 +41,7 @@ public class DataProviderTest {
 		Object[][] user_data = new Object[2][2];
 
 		user_data[0][0] = "pratik.jain@corpository.com";
-		user_data[0][1] = "#Corpository123";
+		user_data[0][1] = "";
 		user_data[1][0] = "bharti.paryani@corpository.com";
 		user_data[1][1] = "priyal.kansara@corpository.com";
 		return user_data;

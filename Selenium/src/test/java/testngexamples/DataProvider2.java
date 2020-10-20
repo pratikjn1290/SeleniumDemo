@@ -46,9 +46,9 @@ public class DataProvider2 {
 
 		Object[][] TestData = new Object[2][2];
 		TestData[0][0] = "pratik.jain@corpository.com";
-		TestData[0][1] = "*Corpository123";
+		TestData[0][1] = "";
 		TestData[1][0] = "priyal.kansara@corpository.com";
-		TestData[1][1] = "#Corpository.com";
+		TestData[1][1] = "";
 		return TestData;
 
 	}

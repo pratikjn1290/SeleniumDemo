@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 
 public class CrossBrowserTest {
 
+	WebDriver driver;
+
 	@Test
 	@Parameters({ "BrowserName" })
 	public void setup(String BrowserName)
@@ -20,11 +22,7 @@ public class CrossBrowserTest {
 		if (BrowserName.equalsIgnoreCase("Firefox")) {
 			System.setProperty("webdriver.gecko.driver",
 					"C:/Users/Pratik/git/SeleniumDemo/Selenium/Drivers/geckodriver.exe");
-			WebDriver driver = new FirefoxDriver();
-			driver.get("https://www.google.co.in");
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			driver.close();
+			driver = new FirefoxDriver();
 
 		}
 
@@ -33,23 +31,20 @@ public class CrossBrowserTest {
 		{
 			System.setProperty("webdriver.chrome.driver",
 					"C:/Users/Pratik/git/SeleniumDemo/Selenium/Drivers/chromedriver.exe");
-			WebDriver driver = new ChromeDriver();
-			driver.get("https://www.google.co.in");
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			driver.close();
+			 driver = new ChromeDriver();
 		}
 
 		else {
-			System.setProperty("webdriver.chrome.driver",
+			System.setProperty("webdriver.edge.driver",
 					"C:/Users/Pratik/git/SeleniumDemo/Selenium/Drivers/edgedriver.exe");
-			WebDriver driver = new EdgeDriver();
-			driver.get("https://www.google.co.in");
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-			driver.close();
+		 driver = new EdgeDriver();
 		}
+
+		driver.get("https://www.google.co.in");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.close();
 
 	}
 
